@@ -1,0 +1,124 @@
+\doxysection{Random functions }
+\hypertarget{group__random}{}\label{group__random}\index{Random functions@{Random functions}}
+
+
+Using time.\+h.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{group__random_ga98b7c682bb6ace85fb747cd2f14db72b}{random\+\_\+double}} ()
+\item 
+void \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em Random numbers array of given length. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__random_gae64c5ef47cc9e7effddf0f50f07c3989}{random\+\_\+sorted\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em We assume that qsort works correct. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__random_ga38b0107a78d0cfea3ee3d545af0d079f}{random\+\_\+reverse\+\_\+sorted\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em Reverse sorting ¯\textbackslash{}(ツ)/\+¯ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Using time.\+h. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__random_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__random_gaaaa928ec65067365161758b44709f48d}\index{Random functions@{Random functions}!random\_arr@{random\_arr}}
+\index{random\_arr@{random\_arr}!Random functions@{Random functions}}
+\doxysubsubsection{\texorpdfstring{random\_arr()}{random\_arr()}}
+{\footnotesize\ttfamily \label{group__random_gaaaa928ec65067365161758b44709f48d} 
+void random\+\_\+arr (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Random numbers array of given length. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00091}{91}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len;\ ++i)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ arr[i]\ =\ \doxymbox{\hyperlink{group__random_ga98b7c682bb6ace85fb747cd2f14db72b}{random\_double}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__random_ga98b7c682bb6ace85fb747cd2f14db72b}\index{Random functions@{Random functions}!random\_double@{random\_double}}
+\index{random\_double@{random\_double}!Random functions@{Random functions}}
+\doxysubsubsection{\texorpdfstring{random\_double()}{random\_double()}}
+{\footnotesize\ttfamily \label{group__random_ga98b7c682bb6ace85fb747cd2f14db72b} 
+double random\+\_\+double (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Makes 64bit double from two 32bit random outputs.~\newline
+Shift left one time is necessary because RAND\+\_\+\+MAX=2147483647 and the highest bit is zero.~\newline
+~\newline
+ !!!won\textquotesingle{}t work if random output is not 32bit or RAND\+\_\+\+MAX!=2147483647!!! 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00076}{76}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ uint64\_t\ high\ =\ ((uint64\_t)\ rand()\ <<\ 1)\ |\ (rand()\ \&\ 0x1);}
+\DoxyCodeLine{00078\ \ \ \ \ uint64\_t\ low\ =\ ((uint64\_t)\ rand()\ <<\ 1)\ |\ (rand()\ \&\ 0x1);}
+\DoxyCodeLine{00079\ \ \ \ \ uint64\_t\ bits\ =\ (high\ <<\ 32)\ |\ low;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ result;}
+\DoxyCodeLine{00081\ \ \ \ \ memcpy(\&result,\ \&bits,\ \textcolor{keyword}{sizeof}(result));}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (isnan(result))\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{group__random_ga98b7c682bb6ace85fb747cd2f14db72b}{random\_double}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__random_ga38b0107a78d0cfea3ee3d545af0d079f}\index{Random functions@{Random functions}!random\_reverse\_sorted\_arr@{random\_reverse\_sorted\_arr}}
+\index{random\_reverse\_sorted\_arr@{random\_reverse\_sorted\_arr}!Random functions@{Random functions}}
+\doxysubsubsection{\texorpdfstring{random\_reverse\_sorted\_arr()}{random\_reverse\_sorted\_arr()}}
+{\footnotesize\ttfamily \label{group__random_ga38b0107a78d0cfea3ee3d545af0d079f} 
+void random\+\_\+reverse\+\_\+sorted\+\_\+arr (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Reverse sorting ¯\textbackslash{}(ツ)/\+¯ 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00106}{106}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\_arr}}(arr,\ len);}
+\DoxyCodeLine{00108\ \ \ \ \ qsort(arr,\ len,\ \textcolor{keyword}{sizeof}(arr[0]),\ \doxymbox{\hyperlink{group__compare_ga9535a37dfb8b54dba8802a0b0e462244}{compare\_double\_inverted}});}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__random_gae64c5ef47cc9e7effddf0f50f07c3989}\index{Random functions@{Random functions}!random\_sorted\_arr@{random\_sorted\_arr}}
+\index{random\_sorted\_arr@{random\_sorted\_arr}!Random functions@{Random functions}}
+\doxysubsubsection{\texorpdfstring{random\_sorted\_arr()}{random\_sorted\_arr()}}
+{\footnotesize\ttfamily \label{group__random_gae64c5ef47cc9e7effddf0f50f07c3989} 
+void random\+\_\+sorted\+\_\+arr (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+We assume that qsort works correct. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00099}{99}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\_arr}}(arr,\ len);}
+\DoxyCodeLine{00101\ \ \ \ \ qsort(arr,\ len,\ \textcolor{keyword}{sizeof}(arr[0]),\ \doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}});}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}

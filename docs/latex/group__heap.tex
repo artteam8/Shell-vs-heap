@@ -1,0 +1,110 @@
+\doxysection{Heap sort }
+\hypertarget{group__heap}{}\label{group__heap}\index{Heap sort@{Heap sort}}
+
+
+\href{https://www.geeksforgeeks.org/c/c-program-for-heap-sort/}{\texttt{https:\+/\+/\+www.\+geeksforgeeks.\+org/\+c/\+c-\/program-\/for-\/heap-\/sort/\+}}  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}{heapify}} (double \texorpdfstring{$\ast$}{*}arr, int len, int root\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Sifting down. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__heap_ga9c6977e3e7e21bd2e8dcfae54f6fefdb}{heap\+\_\+sort}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\href{https://www.geeksforgeeks.org/c/c-program-for-heap-sort/}{\texttt{https:\+/\+/\+www.\+geeksforgeeks.\+org/\+c/\+c-\/program-\/for-\/heap-\/sort/\+}} 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__heap_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__heap_ga9c6977e3e7e21bd2e8dcfae54f6fefdb}\index{Heap sort@{Heap sort}!heap\_sort@{heap\_sort}}
+\index{heap\_sort@{heap\_sort}!Heap sort@{Heap sort}}
+\doxysubsubsection{\texorpdfstring{heap\_sort()}{heap\_sort()}}
+{\footnotesize\ttfamily \label{group__heap_ga9c6977e3e7e21bd2e8dcfae54f6fefdb} 
+void heap\+\_\+sort (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+First loop creates the heap, second sifts elements until all are sifted and array is sorted  
+
+Base function for sort. 
+\begin{DoxyParams}{Parameters}
+{\em arr} & pointer to array we want to sort \\
+\hline
+{\em len} & length of the array \\
+\hline
+{\em \doxylink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}} & pointer to compare counter. leave as NULL if you dont need it \\
+\hline
+{\em \doxylink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}} & pointer to swap counter. leave as NULL if you dont need it    \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00270}{270}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ len\ /\ 2\ -\/\ 1;\ i\ >=\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}{heapify}}(arr,\ len,\ i);}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ len\ -\/\ 1;\ i\ >\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ temp\ =\ arr[0];}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ arr[0]\ =\ arr[i];}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ arr[i]\ =\ temp;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}})\ ++*\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}{heapify}}(arr,\ i,\ 0);}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}\index{Heap sort@{Heap sort}!heapify@{heapify}}
+\index{heapify@{heapify}!Heap sort@{Heap sort}}
+\doxysubsubsection{\texorpdfstring{heapify()}{heapify()}}
+{\footnotesize\ttfamily \label{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d} 
+void heapify (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{, }\item[{int}]{root\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Sifting down. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00238}{238}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{int}\ largest\ =\ root\_index;}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{int}\ left\ =\ 2\ *\ root\_index\ +\ 1;}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{int}\ right\ =\ 2\ *\ root\_index\ +\ 2;}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ <\ len)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}})\ ++*\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(\&arr[left],\ \&arr[largest])\ ==\ 1)\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ largest\ =\ left;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{if}\ (right\ <\ len)\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}})\ ++*\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}};}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(\&arr[right],\ \&arr[largest])\ ==\ 1)\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ largest\ =\ right;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{if}\ (largest\ !=\ root\_index)\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ temp\ =\ arr[root\_index];}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ arr[root\_index]\ =\ arr[largest];}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ arr[largest]\ =\ temp;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}})\ ++*\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}{heapify}}(arr,\ len,\ largest);}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \}}
+
+\end{DoxyCode}

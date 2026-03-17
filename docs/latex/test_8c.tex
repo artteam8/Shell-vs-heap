@@ -1,0 +1,450 @@
+\doxysection{test.\+c File Reference}
+\hypertarget{test_8c}{}\label{test_8c}\index{test.c@{test.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}}) (int k, int len)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{test_8c_a339588b4a22dd8887c1345f5b551ab94}{sort}}) (double \texorpdfstring{$\ast$}{*}arr, int len, int \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}}, int \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}}, \doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}} get\+\_\+gap)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\+\_\+double}} (const void \texorpdfstring{$\ast$}{*}a, const void \texorpdfstring{$\ast$}{*}b)
+\item 
+int \doxymbox{\hyperlink{group__compare_ga9535a37dfb8b54dba8802a0b0e462244}{compare\+\_\+double\+\_\+inverted}} (const void \texorpdfstring{$\ast$}{*}a, const void \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Same, but for reverse-\/sorting. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{group__random_ga98b7c682bb6ace85fb747cd2f14db72b}{random\+\_\+double}} ()
+\item 
+void \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em Random numbers array of given length. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__random_gae64c5ef47cc9e7effddf0f50f07c3989}{random\+\_\+sorted\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em We assume that qsort works correct. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__random_ga38b0107a78d0cfea3ee3d545af0d079f}{random\+\_\+reverse\+\_\+sorted\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em Reverse sorting ¯\textbackslash{}(ツ)/\+¯ \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{test_8c_acd5b1422bf7d936dee49fe859ae6673d}{print\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\begin{DoxyCompactList}\small\item\em Debug print. \end{DoxyCompactList}\item 
+unsigned int \doxymbox{\hyperlink{test_8c_aa58165744313f0e600ffc1e0192b0608}{floor\+\_\+log2}} (unsigned int n)
+\item 
+int \doxymbox{\hyperlink{group__gap_ga712a266c01635670f2139dd961d1cee2}{gap\+\_\+shell}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_ga92bea414d02792a42f3128ab5ea08e92}{gap\+\_\+hibbard}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_ga85a2f8e781b654eafe14aad5c505d10d}{gap\+\_\+knuth}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_gad6b62fd0f05b9d5e6e790d3c649023a8}{gap\+\_\+ciura}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{test_8c_ae6c15d74f1ff47fcd41ae7984e220c9e}{shell\+\_\+sort}} (double \texorpdfstring{$\ast$}{*}arr, int len, \doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}} get\+\_\+gap)
+\item 
+void \doxymbox{\hyperlink{group__heap_ga8587428a4dc4321767abd94b5ea1fd7d}{heapify}} (double \texorpdfstring{$\ast$}{*}arr, int len, int root\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Sifting down. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__heap_ga9c6977e3e7e21bd2e8dcfae54f6fefdb}{heap\+\_\+sort}} (double \texorpdfstring{$\ast$}{*}arr, int len)
+\item 
+int \doxymbox{\hyperlink{test_8c_ab363276d81f54bff47fa8f8a54ba68a8}{check\+\_\+arr}} (double \texorpdfstring{$\ast$}{*}arr, double \texorpdfstring{$\ast$}{*}numbers, int len)
+\item 
+int \doxymbox{\hyperlink{test_8c_a288de4e9c1392fbbc925aecdcc0944e8}{test}} (int n)
+\item 
+int \doxymbox{\hyperlink{test_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\+\_\+shell}}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\+\_\+shell}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\+\_\+heap}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\+\_\+heap}}
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\+\_\+arrays}}
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\+\_\+arrays}}
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\+\_\+arrays}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\+\_\+gaps}} = NULL
+\begin{DoxyCompactList}\small\item\em Knuth\textquotesingle{}s sequence is recursive, so we need to compute it one time and store. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\+\_\+size}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{test_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{test_8c_a339588b4a22dd8887c1345f5b551ab94}\index{test.c@{test.c}!sort@{sort}}
+\index{sort@{sort}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{sort}{sort}}
+{\footnotesize\ttfamily \label{test_8c_a339588b4a22dd8887c1345f5b551ab94} 
+typedef void(\texorpdfstring{$\ast$}{*} sort) (double \texorpdfstring{$\ast$}{*}arr, int len, int \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}}, int \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}}, \doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}} get\+\_\+gap)}
+
+Base function for sort. 
+\begin{DoxyParams}{Parameters}
+{\em arr} & pointer to array we want to sort \\
+\hline
+{\em len} & length of the array \\
+\hline
+{\em \doxylink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}} & pointer to compare counter. leave as NULL if you dont need it \\
+\hline
+{\em \doxylink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}} & pointer to swap counter. leave as NULL if you dont need it \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00196}{196}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{test_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{test_8c_ab363276d81f54bff47fa8f8a54ba68a8}\index{test.c@{test.c}!check\_arr@{check\_arr}}
+\index{check\_arr@{check\_arr}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{check\_arr()}{check\_arr()}}
+{\footnotesize\ttfamily \label{test_8c_ab363276d81f54bff47fa8f8a54ba68a8} 
+int check\+\_\+arr (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{numbers}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+Check that all elements remain in array and it is sorted uses \doxylink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare double function} 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00292}{292}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{int}\ *marks\ =\ calloc(len,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len;\ ++i)\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ found\ =\ 0;}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ len;\ ++j)\ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(\&numbers[i],\ \&arr[j])\ ==\ 0\ \&\&\ !marks[j])\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ marks[j]\ =\ 1;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ 1;}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ free(marks);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00308\ \ \ \ \ \}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ free(marks);}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ len;\ ++i)\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(\&arr[i\ -\/\ 1],\ \&arr[i])\ ==\ 1)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00319\ \}}
+
+\end{DoxyCode}
+\Hypertarget{test_8c_aa58165744313f0e600ffc1e0192b0608}\index{test.c@{test.c}!floor\_log2@{floor\_log2}}
+\index{floor\_log2@{floor\_log2}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{floor\_log2()}{floor\_log2()}}
+{\footnotesize\ttfamily \label{test_8c_aa58165744313f0e600ffc1e0192b0608} 
+unsigned int floor\+\_\+log2 (\begin{DoxyParamCaption}\item[{unsigned int}]{n}{}\end{DoxyParamCaption})}
+
+{\itshape clz} returns number of leading zeros.~\newline
+31 -\/ {\itshape clz} is the highest bit set to 1 in binary representation; that means the closest power of 2. 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00125}{125}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ 31\ -\/\ \_\_builtin\_clz(n);}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+\Hypertarget{test_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{test.c@{test.c}!main@{main}}
+\index{main@{main}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{test_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Testing with different n\textquotesingle{}s, each time multiplying by 10~\newline
+Set random seed once for all tests 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00483}{483}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00484\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00485\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ 10;}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}n\ =\ \%d\(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{test_8c_a288de4e9c1392fbbc925aecdcc0944e8}{test}}(n);}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ n\ =\ n\ *\ 10;}
+\DoxyCodeLine{00493\ \ \ \ \ \}}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00496\ \}}
+
+\end{DoxyCode}
+\Hypertarget{test_8c_acd5b1422bf7d936dee49fe859ae6673d}\index{test.c@{test.c}!print\_arr@{print\_arr}}
+\index{print\_arr@{print\_arr}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{print\_arr()}{print\_arr()}}
+{\footnotesize\ttfamily \label{test_8c_acd5b1422bf7d936dee49fe859ae6673d} 
+void print\+\_\+arr (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Debug print. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00114}{114}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len;\ ++i)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%e\ "{}},\ arr[i]);}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\Hypertarget{test_8c_ae6c15d74f1ff47fcd41ae7984e220c9e}\index{test.c@{test.c}!shell\_sort@{shell\_sort}}
+\index{shell\_sort@{shell\_sort}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{shell\_sort()}{shell\_sort()}}
+{\footnotesize\ttfamily \label{test_8c_ae6c15d74f1ff47fcd41ae7984e220c9e} 
+void shell\+\_\+sort (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{len}{, }\item[{\doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}}}]{get\+\_\+gap}{}\end{DoxyParamCaption})}
+
+\href{https://www.geeksforgeeks.org/dsa/shell-sort/}{\texttt{https:\+/\+/\+www.\+geeksforgeeks.\+org/\+dsa/\+shell-\/sort/\+}}  
+
+Base function for sort. 
+\begin{DoxyParams}{Parameters}
+{\em arr} & pointer to array we want to sort \\
+\hline
+{\em len} & length of the array \\
+\hline
+{\em \doxylink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}} & pointer to compare counter. leave as NULL if you dont need it \\
+\hline
+{\em \doxylink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}} & pointer to swap counter. leave as NULL if you dont need it    \\
+\hline
+{\em get\+\_\+gap} & \doxylink{group__gap}{Gap functions} any "{}gap function"{} that decreases to 1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00203}{203}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ 1;}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{int}\ cur\_gap\ =\ get\_gap(k,\ len);}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ cur\_gap\ =\ get\_gap(++k,\ len);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ cur\_gap;\ i\ <\ len;\ ++i)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ temp\ =\ arr[i];}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ i;}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ >=\ cur\_gap)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}})\ ++*\doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(\&arr[j\ -\/\ cur\_gap],\ \&temp)\ ==\ 1)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arr[j]\ =\ arr[j\ -\/\ cur\_gap];}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j\ =\ j\ -\/\ cur\_gap;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}})\ ++*\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}};}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ !=\ i)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arr[j]\ =\ temp;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}})\ ++*\doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (cur\_gap\ >\ 1);}
+\DoxyCodeLine{00230\ \}}
+
+\end{DoxyCode}
+\Hypertarget{test_8c_a288de4e9c1392fbbc925aecdcc0944e8}\index{test.c@{test.c}!test@{test}}
+\index{test@{test}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily \label{test_8c_a288de4e9c1392fbbc925aecdcc0944e8} 
+int test (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+Tests sort functions for fixed n on the same arrays~\newline
+~\newline
+ swapped\+\_\+shell and compared\+\_\+shell contain num of swaps and compares for each GAP FUNCTION and then for each ARRAY. swapped\+\_\+heap and compared\+\_\+heap contain swaps and compares for each ARRAY. 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00326}{326}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ num\_arrays\ =\ 4;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{char}\ *func\_names[]\ =\ \{\textcolor{stringliteral}{"{}Shell"{}},\ \textcolor{stringliteral}{"{}Hibbard"{}},\ \textcolor{stringliteral}{"{}Knuth"{}},\ \textcolor{stringliteral}{"{}Ciura"{}}\};}
+\DoxyCodeLine{00330\ \ \ \ \ int\ (*gap\_funcs[])(int,\ int)\ =\ \{\doxymbox{\hyperlink{group__gap_ga712a266c01635670f2139dd961d1cee2}{gap\_shell}},\ \doxymbox{\hyperlink{group__gap_ga92bea414d02792a42f3128ab5ea08e92}{gap\_hibbard}},\ \doxymbox{\hyperlink{group__gap_ga85a2f8e781b654eafe14aad5c505d10d}{gap\_knuth}},\ \doxymbox{\hyperlink{group__gap_gad6b62fd0f05b9d5e6e790d3c649023a8}{gap\_ciura}}\};}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ num\_gaps\ =\ \textcolor{keyword}{sizeof}(gap\_funcs)\ /\ \textcolor{keyword}{sizeof}(gap\_funcs[0]);}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}\ =\ calloc(num\_gaps,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{00334\ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}\ =\ calloc(num\_gaps,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ g\ =\ 0;\ g\ <\ num\_gaps;\ ++g)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[g]\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[g]\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[g][j]\ =\ 0;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[g][j]\ =\ 0;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}}\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00346\ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}}\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}}[j]\ =\ 0;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}}[j]\ =\ 0;}
+\DoxyCodeLine{00351\ \ \ \ \ \}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}*));}
+\DoxyCodeLine{00354\ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}*));}
+\DoxyCodeLine{00355\ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}\ =\ calloc(num\_arrays,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}*));}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_arrays;\ ++i)\ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[i]\ =\ calloc(n,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[i]\ =\ calloc(n,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[i]\ =\ calloc(n,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00362\ \ \ \ \ \}}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \ \ \doxymbox{\hyperlink{group__random_gae64c5ef47cc9e7effddf0f50f07c3989}{random\_sorted\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[0],\ n);}
+\DoxyCodeLine{00365\ \ \ \ \ \doxymbox{\hyperlink{group__random_ga38b0107a78d0cfea3ee3d545af0d079f}{random\_reverse\_sorted\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[1],\ n);}
+\DoxyCodeLine{00366\ \ \ \ \ \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[2],\ n);}
+\DoxyCodeLine{00367\ \ \ \ \ \doxymbox{\hyperlink{group__random_gaaaa928ec65067365161758b44709f48d}{random\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[3],\ n);}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[j][i]\ =\ \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j][i];}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[j][i]\ =\ \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j][i];}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00374\ \ \ \ \ \}}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ g\ =\ 0;\ g\ <\ num\_gaps;\ ++g)\ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j][i]\ =\ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[j][i];}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}}\ =\ \&\doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[g][j];}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}}\ =\ \&\doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[g][j];}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{test_8c_ae6c15d74f1ff47fcd41ae7984e220c9e}{shell\_sort}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j],\ n,\ gap\_funcs[g]);}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{test_8c_ab363276d81f54bff47fa8f8a54ba68a8}{check\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j],\ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[j],\ n))\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ERROR!!!\ \%s\ \%d\(\backslash\)n"{}},\ func\_names[g],\ j);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{test_8c_acd5b1422bf7d936dee49fe859ae6673d}{print\_arr}}(\doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[j],\ n);}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{test_8c_acd5b1422bf7d936dee49fe859ae6673d}{print\_arr}}(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[j],\ n);}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_arrays;\ ++i)\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[i]);}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[i]);}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[i]);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \ \ \}}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__pointers_gac9daa99d2af75c012daed9211cac7b15}{swapped}}\ =\ \&\doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}}[j];}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__pointers_ga37368cf123c46d8a592faeebe74783d9}{compared}}\ =\ \&\doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}}[j];}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__heap_ga9c6977e3e7e21bd2e8dcfae54f6fefdb}{heap\_sort}}(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[j],\ n);}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{test_8c_ab363276d81f54bff47fa8f8a54ba68a8}{check\_arr}}(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[j],\ \doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[j],\ n))\ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ERROR!!!\ \%d\(\backslash\)n"{}},\ j);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_arrays;\ ++i)\ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[i]);}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[i]);}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[i]);}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \ \ \ \ \}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nShell\ sort:"{}});}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ g\ =\ 0;\ g\ <\ num\_gaps;\ ++g)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nGap\ function\ \%s:\(\backslash\)n"{}},\ func\_names[g]);}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)multirow\{2\}\{*\}\{10\}\ \&\ Сравнения\ "{}});}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ avg\_comp\ =\ 0;}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%d\ "{}},\ \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[g][j]);}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ avg\_comp\ +=\ \doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[g][j];}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%lf\ \(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n"{}},\ avg\_comp\ /\ num\_arrays);}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)cline\{2-\/7\}\(\backslash\)n\&\ Перемещения\ "{}});}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ avg\_swap\ =\ 0;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%d\ "{}},\ \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[g][j]);}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ avg\_swap\ +=\ \doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[g][j];}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%lf\ \(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n"{}},\ avg\_swap\ /\ num\_arrays);}
+\DoxyCodeLine{00436\ \ \ \ \ \}}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nHeap\ sort:\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00439\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)multirow\{2\}\{*\}\{10\}\ \&\ Сравнения\ "{}});}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordtype}{double}\ avg\_comp\ =\ 0;}
+\DoxyCodeLine{00441\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%d\ "{}},\ \doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}}[j]);}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ avg\_comp\ +=\ \doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}}[j];}
+\DoxyCodeLine{00444\ \ \ \ \ \}}
+\DoxyCodeLine{00445\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%lf\ \(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n"{}},\ avg\_comp\ /\ num\_arrays);}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)cline\{2-\/7\}\(\backslash\)n\&\ Перемещения\ "{}});}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordtype}{double}\ avg\_swap\ =\ 0;}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ num\_arrays;\ ++j)\ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%d\ "{}},\ \doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}}[j]);}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ avg\_swap\ +=\ \doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}}[j];}
+\DoxyCodeLine{00452\ \ \ \ \ \}}
+\DoxyCodeLine{00453\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&\ \%lf\ \(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n"{}},\ avg\_swap\ /\ num\_arrays);}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_arrays;\ ++i)\ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}}[i]);}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}}[i]);}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}}[i]);}
+\DoxyCodeLine{00459\ \ \ \ \ \}}
+\DoxyCodeLine{00460\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaaffc6282a41061e7d3e7b9bac1401df1}{shell\_arrays}});}
+\DoxyCodeLine{00461\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga619a7986c1899aa66f5aad0e4a242082}{heap\_arrays}});}
+\DoxyCodeLine{00462\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga7698ad82825d859933f3b9391e390eeb}{copy\_arrays}});}
+\DoxyCodeLine{00463\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga6a613c5010b262b83c165ad8fa94d644}{swapped\_heap}});}
+\DoxyCodeLine{00464\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga724705c6f1cb670229ef69ce6008c95e}{compared\_heap}});}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_gaps;\ ++i)\ \{}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}}[i]);}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}}[i]);}
+\DoxyCodeLine{00469\ \ \ \ \ \}}
+\DoxyCodeLine{00470\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_ga577e5f59159225dceef6825a6e535ab3}{swapped\_shell}});}
+\DoxyCodeLine{00471\ \ \ \ \ free(\doxymbox{\hyperlink{group__storage_gaf3911ca7b41573b0c8209cb3670d3964}{compared\_shell}});}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ free(\doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\_gaps}});}
+\DoxyCodeLine{00474\ \ \ \ \ \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\_gaps}}\ =\ NULL;}
+\DoxyCodeLine{00475\ \ \ \ \ \doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\_size}}\ =\ 0;}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00478\ \}}
+
+\end{DoxyCode}

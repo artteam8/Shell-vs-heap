@@ -1,0 +1,197 @@
+\doxysection{Gap functions }
+\hypertarget{group__gap}{}\label{group__gap}\index{Gap functions@{Gap functions}}
+
+
+For the k\textquotesingle{}th step of sorting, return current gap.  
+
+
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}{gap}}) (int k, int len)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{group__gap_ga712a266c01635670f2139dd961d1cee2}{gap\+\_\+shell}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_ga92bea414d02792a42f3128ab5ea08e92}{gap\+\_\+hibbard}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_ga85a2f8e781b654eafe14aad5c505d10d}{gap\+\_\+knuth}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_gad6b62fd0f05b9d5e6e790d3c649023a8}{gap\+\_\+ciura}} (int k, int len)
+\begin{DoxyCompactList}\small\item\em For the k\textquotesingle{}th step of sorting, return current gap.    \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\+\_\+gaps}} = NULL
+\begin{DoxyCompactList}\small\item\em Knuth\textquotesingle{}s sequence is recursive, so we need to compute it one time and store. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\+\_\+size}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For the k\textquotesingle{}th step of sorting, return current gap. 
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{group__gap_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group__gap_ga699087e6fb7b6fc5e545762733eb2bce}\index{Gap functions@{Gap functions}!gap@{gap}}
+\index{gap@{gap}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{gap}{gap}}
+{\footnotesize\ttfamily \label{group__gap_ga699087e6fb7b6fc5e545762733eb2bce} 
+typedef int(\texorpdfstring{$\ast$}{*} gap) (int k, int len)}
+
+Base gap function for docs. k is increasing, so we go from huge gaps to 1. 
+\begin{DoxyParams}{Parameters}
+{\em k} & current step \\
+\hline
+{\em len} & array length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current gap 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00137}{137}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__gap_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__gap_gad6b62fd0f05b9d5e6e790d3c649023a8}\index{Gap functions@{Gap functions}!gap\_ciura@{gap\_ciura}}
+\index{gap\_ciura@{gap\_ciura}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{gap\_ciura()}{gap\_ciura()}}
+{\footnotesize\ttfamily \label{group__gap_gad6b62fd0f05b9d5e6e790d3c649023a8} 
+int gap\+\_\+ciura (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+For the k\textquotesingle{}th step of sorting, return current gap.    
+
+\href{https://web.archive.org/web/20180923235211/http://sun.aei.polsl.pl/~mciura/publikacje/shellsort.pdf}{\texttt{https:\+/\+/\+web.\+archive.\+org/\+web/\+20180923235211/\+http:\+/\+/\+sun.\+aei.\+polsl.\+pl/\+\texorpdfstring{$\sim$}{\string~}mciura/\+publikacje/\+shellsort.\+pdf}}~\newline
+~\newline
+Why not store sequence in memory, like Knuth\textquotesingle{}s? ~\newline
+Because Ciura\textquotesingle{}s sequence is not computable and made of constants, so I just typed them by hand. 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00181}{181}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ seq[]\ =\ \{1,\ 4,\ 10,\ 23,\ 57,\ 132,\ 301,\ 701,\ 1750,\ 3938,\ 8860\};}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 10;}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ >\ 0\ \&\&\ len\ <=\ seq[i])\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ -\/-\/i;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ seq[i\ -\/\ k\ +\ 1];}
+\DoxyCodeLine{00188\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__gap_ga92bea414d02792a42f3128ab5ea08e92}\index{Gap functions@{Gap functions}!gap\_hibbard@{gap\_hibbard}}
+\index{gap\_hibbard@{gap\_hibbard}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{gap\_hibbard()}{gap\_hibbard()}}
+{\footnotesize\ttfamily \label{group__gap_ga92bea414d02792a42f3128ab5ea08e92} 
+int gap\+\_\+hibbard (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+For the k\textquotesingle{}th step of sorting, return current gap.    
+
+from Knuth\textquotesingle{}s "{}\+The Art of Computer Programming"{} Vol. 3 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00150}{150}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{return}\ (1\ <<\ (\doxymbox{\hyperlink{test_8c_aa58165744313f0e600ffc1e0192b0608}{floor\_log2}}((\textcolor{keywordtype}{unsigned})\ len)\ +\ 1\ -\/\ k))\ -\/\ 1;}
+\DoxyCodeLine{00152\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__gap_ga85a2f8e781b654eafe14aad5c505d10d}\index{Gap functions@{Gap functions}!gap\_knuth@{gap\_knuth}}
+\index{gap\_knuth@{gap\_knuth}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{gap\_knuth()}{gap\_knuth()}}
+{\footnotesize\ttfamily \label{group__gap_ga85a2f8e781b654eafe14aad5c505d10d} 
+int gap\+\_\+knuth (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+For the k\textquotesingle{}th step of sorting, return current gap.    
+
+from Knuth\textquotesingle{}s "{}\+The Art of Computer Programming"{} Vol. 3 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00161}{161}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\_size}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\_gaps}}\ =\ calloc(len,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cur\_gap\ =\ 1;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (cur\_gap\ <=\ len)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\_gaps}}[i]\ =\ cur\_gap;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ cur\_gap\ =\ 3\ *\ cur\_gap\ +\ 1;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ ++i;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\_size}}\ =\ i;}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}{knuth\_gaps}}[\doxymbox{\hyperlink{group__gap_gaf299b935332b5cc9827058f89bf40a73}{knuth\_size}}\ -\/\ k];}
+\DoxyCodeLine{00174\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__gap_ga712a266c01635670f2139dd961d1cee2}\index{Gap functions@{Gap functions}!gap\_shell@{gap\_shell}}
+\index{gap\_shell@{gap\_shell}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{gap\_shell()}{gap\_shell()}}
+{\footnotesize\ttfamily \label{group__gap_ga712a266c01635670f2139dd961d1cee2} 
+int gap\+\_\+shell (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+For the k\textquotesingle{}th step of sorting, return current gap.    
+
+from \href{https://web.archive.org/web/20170830020037/http://penguin.ewu.edu/cscd300/Topic/AdvSorting/p30-shell.pdf}{\texttt{https:\+/\+/\+web.\+archive.\+org/\+web/\+20170830020037/\+http:\+/\+/\+penguin.\+ewu.\+edu/\+cscd300/\+\+Topic/\+\+Adv\+Sorting/\+p30-\/shell.\+pdf}} 
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00143}{143}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ len\ /\ (1\ <<\ k);}
+\DoxyCodeLine{00145\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-var-members}
+\Hypertarget{group__gap_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a}\index{Gap functions@{Gap functions}!knuth\_gaps@{knuth\_gaps}}
+\index{knuth\_gaps@{knuth\_gaps}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{knuth\_gaps}{knuth\_gaps}}
+{\footnotesize\ttfamily \label{group__gap_ga4105e30d75c9e7eca8c6f4af3dead99a} 
+int\texorpdfstring{$\ast$}{*} knuth\+\_\+gaps = NULL}
+
+
+
+Knuth\textquotesingle{}s sequence is recursive, so we need to compute it one time and store. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00155}{155}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+\Hypertarget{group__gap_gaf299b935332b5cc9827058f89bf40a73}\index{Gap functions@{Gap functions}!knuth\_size@{knuth\_size}}
+\index{knuth\_size@{knuth\_size}!Gap functions@{Gap functions}}
+\doxysubsubsection{\texorpdfstring{knuth\_size}{knuth\_size}}
+{\footnotesize\ttfamily \label{group__gap_gaf299b935332b5cc9827058f89bf40a73} 
+int knuth\+\_\+size = 0}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00156}{156}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+

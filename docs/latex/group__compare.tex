@@ -1,0 +1,88 @@
+\doxysection{Compare functions }
+\hypertarget{group__compare}{}\label{group__compare}\index{Compare functions@{Compare functions}}
+
+
+Used for sorting.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\+\_\+double}} (const void \texorpdfstring{$\ast$}{*}a, const void \texorpdfstring{$\ast$}{*}b)
+\item 
+int \doxymbox{\hyperlink{group__compare_ga9535a37dfb8b54dba8802a0b0e462244}{compare\+\_\+double\+\_\+inverted}} (const void \texorpdfstring{$\ast$}{*}a, const void \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Same, but for reverse-\/sorting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used for sorting. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__compare_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}\index{Compare functions@{Compare functions}!compare\_double@{compare\_double}}
+\index{compare\_double@{compare\_double}!Compare functions@{Compare functions}}
+\doxysubsubsection{\texorpdfstring{compare\_double()}{compare\_double()}}
+{\footnotesize\ttfamily \label{group__compare_gacbd1b9870db2293a5d461226d6c53cb5} 
+int compare\+\_\+double (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+Tries to compare bits, because EPS in fabs(\texorpdfstring{$\ast$}{*}a -\/ \texorpdfstring{$\ast$}{*}b) \texorpdfstring{$<$}{<} EPS cannot be chosen small enough.~\newline
+If not equal, just compare them regular way.~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em a} & double pointer \\
+\hline
+{\em b} & double pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00040}{40}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ da\ =\ *(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*)a;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ db\ =\ *(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*)b;}
+\DoxyCodeLine{00043\ \ \ \ \ da\ =\ fabs(da);}
+\DoxyCodeLine{00044\ \ \ \ \ db\ =\ fabs(db);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ uint64\_t\ a\_bits,\ b\_bits;}
+\DoxyCodeLine{00047\ \ \ \ \ memcpy(\&a\_bits,\ \&da,\ \textcolor{keyword}{sizeof}(uint64\_t));}
+\DoxyCodeLine{00048\ \ \ \ \ memcpy(\&b\_bits,\ \&db,\ \textcolor{keyword}{sizeof}(uint64\_t));}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\_bits\ ==\ b\_bits)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00052\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (da\ >\ db)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__compare_ga9535a37dfb8b54dba8802a0b0e462244}\index{Compare functions@{Compare functions}!compare\_double\_inverted@{compare\_double\_inverted}}
+\index{compare\_double\_inverted@{compare\_double\_inverted}!Compare functions@{Compare functions}}
+\doxysubsubsection{\texorpdfstring{compare\_double\_inverted()}{compare\_double\_inverted()}}
+{\footnotesize\ttfamily \label{group__compare_ga9535a37dfb8b54dba8802a0b0e462244} 
+int compare\+\_\+double\+\_\+inverted (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Same, but for reverse-\/sorting. 
+
+
+
+Definition at line \doxymbox{\hyperlink{test_8c_source_l00063}{63}} of file \doxymbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1\ *\ \doxymbox{\hyperlink{group__compare_gacbd1b9870db2293a5d461226d6c53cb5}{compare\_double}}(a,\ b);}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
